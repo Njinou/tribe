@@ -13,7 +13,8 @@
   },
   "rules": {
     // Add any ESLint rules you want to customize
-    "prettier/prettier": ["error", { "endOfLine": "auto" }]
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "semi": ["error", "always"]
   }
 }
 
