@@ -14,7 +14,20 @@
     "format": "prettier --write ."
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.ts$": "ts-jest"
+    },
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ],
+    "moduleFileExtensions": ["js", "jsx", "ts", "tsx", "json", "node"],
+    "collectCoverage": true,
+    "coverageReporters": ["text", "lcov"],
+    "testPathIgnorePatterns": ["/node_modules/", "/build/"]
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
