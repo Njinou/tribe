@@ -1,7 +1,12 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true,
+    "target": "esnext", // or "es6", "es2017", etc.
+    "module": "commonjs", // or "esnext", "es6", etc., depending on your setup
+    "jsx": "react-native", // This is crucial for React Native
+    "strict": true, // Optional, enables all strict type-checking options
+    "esModuleInterop": true, // Allows default imports from modules with no default export
+    "skipLibCheck": true, // Optional, skips type checking of declaration files
     "paths": {
       "@/*": [
         "./*"
@@ -13,5 +18,8 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules" // Always exclude node_modules
   ]
 }

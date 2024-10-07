@@ -1,4 +1,4 @@
-{
+{"type": "module",
   "name": "tribe",
   "main": "expo-router/entry",
   "version": "1.0.0",
@@ -12,36 +12,6 @@
     "lint": "expo lint",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write ."
-  },
-  "jest": {
-    "preset": "jest-expo",
-    "testEnvironment": "jsdom",
-    "transform": {
-      "^.+\\.jsx?$": "babel-jest",
-      "^.+\\.js$": "babel-jest",
-      "^.+\\.ts$": "ts-jest",
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "setupFilesAfterEnv": [
-      "@testing-library/jest-native/extend-expect"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "jsx",
-      "ts",
-      "tsx",
-      "json",
-      "node"
-    ],
-    "collectCoverage": true,
-    "coverageReporters": [
-      "text",
-      "lcov"
-    ],
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/build/"
-    ]
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
@@ -69,6 +39,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.7",
     "@babel/preset-env": "^7.25.7",
+    "@testing-library/jest-native": "^5.4.3",
     "@testing-library/react-native": "^12.7.2",
     "@types/jest": "^29.5.13",
     "@types/react": "~18.2.45",
