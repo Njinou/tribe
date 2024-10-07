@@ -1,7 +1,10 @@
+import React,{useEffect,useState} from 'react';
 import { Image, StyleSheet, Platform,Text } from 'react-native';
-
+import Constants from 'expo-constants';
 export default function HomeScreen() {
-  return <Text>Mr Nitheu is Taking over this project by horn throug storm</Text>;
+  
+  const apiUrl =  process.env.API_URL;
+  return <Text>Mr Nitheu is Taking over this project by horn throug storm {apiUrl}</Text>;
 }
 
 const styles = StyleSheet.create({
