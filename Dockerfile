@@ -15,7 +15,7 @@ COPY . .
 
 # Expose the app port (replace with your app's port, e.g., 8080)
 #EXPOSE 8080
-EXPOSE 19000
+EXPOSE 19000 8081
 
 # Define the command to run your app (change this if needed)
 CMD ["npm", "start"]
